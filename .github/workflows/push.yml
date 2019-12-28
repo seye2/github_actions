@@ -47,7 +47,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        REF : ${{ github.ref }}
+        REF : ${{ github.base_ref }}
       run: |
         aws s3 cp \
           --recursive \
